@@ -12,7 +12,7 @@ export default {
 
 <template>
     
-    <div class="d-flex align-items-end gap-4">
+    <!-- <div class="d-flex align-items-end gap-4">
       <div class="w-50">
         <input
           type="text"
@@ -24,9 +24,9 @@ export default {
         >
       </div>
       <div>
-        <button class="btn btn-danger">Cerca</button>
+        <button @click="getMovies()" class="btn btn-danger">Cerca</button>
       </div>
-    </div>
+    </div> -->
     
 </template>
 
