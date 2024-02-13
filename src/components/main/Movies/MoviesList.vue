@@ -18,7 +18,13 @@ export default {
 <template>
     
   <div class="row">
-    <MovieCard v-for="(element, index) in store.moviesList" :key="index"/>
+    <h2>FILM</h2>
+    <MovieCard v-for="(element, index) in store.moviesList" :key="index" :propsElement="element"/>
+  </div>
+
+  <div class="row">
+    <h2>SERIE TV</h2>
+    <MovieCard v-for="(element, index) in store.tvShowsList" :key="index" :propsElement="element"/>
   </div>
 
 </template>

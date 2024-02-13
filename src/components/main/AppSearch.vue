@@ -2,6 +2,8 @@
 import { store } from '../../store'
 export default {
   name: "AppSearch",
+  props: ['getMovies'],
+  
   data() {
     return {
       store
@@ -12,7 +14,7 @@ export default {
 
 <template>
     
-    <!-- <div class="d-flex align-items-end gap-4">
+    <div class="d-flex align-items-end gap-4">
       <div class="w-50">
         <input
           type="text"
@@ -26,7 +28,7 @@ export default {
       <div>
         <button @click="getMovies()" class="btn btn-danger">Cerca</button>
       </div>
-    </div> -->
+    </div>
     
 </template>
 
