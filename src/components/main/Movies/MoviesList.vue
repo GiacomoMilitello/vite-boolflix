@@ -16,14 +16,13 @@ export default {
 </script>
 
 <template>
-    
-  <div class="row">
-    <h2>FILM</h2>
+  <h2 v-if="store.showTitles" class="text-white text-start ms-4 mt-3">FILM</h2>
+  <div class="row justify-content-center mx-2">
     <MovieCard v-for="(element, index) in store.moviesList" :key="index" :propsElement="element"/>
   </div>
 
-  <div class="row">
-    <h2>SERIE TV</h2>
+  <h2 v-if="store.showTitles" class="text-white text-start ms-4 mt-3">SERIE TV</h2>
+  <div class="row justify-content-center mx-2">
     <MovieCard v-for="(element, index) in store.tvShowsList" :key="index" :propsElement="element"/>
   </div>
 

@@ -33,6 +33,8 @@ export default {
         console.log(res.data)
 
         store.loading = false
+
+        store.showTitles = true
       } )
       store.searchText = '';
     }
