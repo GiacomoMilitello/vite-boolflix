@@ -11,19 +11,21 @@ export default {
     return {
       store
     }
-  }
+  },
 };
 </script>
 
 <template>
-  <h2 v-if="store.showTitles" class="text-white text-start ms-4 mt-3">FILM</h2>
-  <div class="row justify-content-center mx-2">
+  <div class="pb-5">
+    <h2 v-if="store.showTitles" class="text-white text-start ms-4 mt-5">FILM</h2>
+  <div class="row mx-3">
     <MovieCard v-for="(element, index) in store.moviesList" :key="index" :propsElement="element"/>
   </div>
 
-  <h2 v-if="store.showTitles" class="text-white text-start ms-4 mt-3">SERIE TV</h2>
-  <div class="row justify-content-center mx-2">
+  <h2 v-if="store.showTitles" class="text-white text-start ms-4 mt-5">SERIE TV</h2>
+  <div class="row mx-3">
     <MovieCard v-for="(element, index) in store.tvShowsList" :key="index" :propsElement="element"/>
+  </div>
   </div>
 
 </template>
@@ -33,4 +35,21 @@ export default {
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
 
+.row{
+  height: 350px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.row::-webkit-scrollbar {
+  width: 1em;
+}
+.row::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background-color: rgb(76, 76, 76);
+}
+.row::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #d02e2c;
+}
 </style>
